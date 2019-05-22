@@ -50,7 +50,7 @@ class AidlActivity : Activity() {
         }
     }
 
-    //绑定服务 拿到远程service
+    //绑定服务 拿到远程service服务
     private fun bindService() {
         serviceConnection = object : ServiceConnection {
             override fun onServiceDisconnected(name: ComponentName?) {
