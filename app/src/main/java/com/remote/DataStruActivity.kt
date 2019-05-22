@@ -5,6 +5,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.support.v7.widget.AppCompatButton
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_data_stru.*
 import java.util.*
 import kotlin.Comparator
 import kotlin.collections.HashSet
@@ -46,8 +47,8 @@ class DataStruActivity : Activity() {
     private fun initSetView() {
 
         //HashSet类按照哈希算法来存取集合中的对象，存取速度比较快，HashSet是根据hashCode来决定存储位置的，是通过HashMap实现的，所以对象必须实现hashCode()方法，存储的数据无序不能重复，可以存储null,但是只能存一个
-        findViewById<AppCompatButton>(R.id.hashSetBtn).setOnClickListener {
-           val mySet=HashSet<String>()
+        hashSetBtn.setOnClickListener {
+            val mySet = HashSet<String>()
             mySet.add("5")
             mySet.add("1")
             mySet.add("3")
@@ -59,7 +60,7 @@ class DataStruActivity : Activity() {
 
 
         //TreeSet类实现了SortedSet接口，能够对集合中的对象进行排序,TreeSet是根据二叉树实现的，也就是TreeMap, 放入数据不能重复且不能为null,可以重写compareTo()方法来确定元素大小，从而进行升序排序
-        findViewById<AppCompatButton>(R.id.treeSetBtn).setOnClickListener {
+        treeSetBtn.setOnClickListener {
             val mySet = TreeSet<Int>(MyComparator())
             mySet.add(1)
             mySet.add(3)
