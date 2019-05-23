@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_handler.*
 import org.jetbrains.anko.toast
 
 /**
- * @author Dsh  imkobedroid@gmail.com
+ * @author Dsh imkobedroid@gmail.com
  * @date 2019-05-22
  */
 @SuppressLint("Registered")

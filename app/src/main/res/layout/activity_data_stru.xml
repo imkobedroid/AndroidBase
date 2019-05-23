@@ -23,4 +23,21 @@
             android:background="@color/colorAccent"
             android:layout_height="wrap_content"/>
 
+    <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:text="arrayList"
+            android:layout_margin="10dp"
+            android:id="@+id/arrayList"
+            android:background="@color/colorAccent"
+            android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:text="linkList"
+            android:layout_margin="10dp"
+            android:id="@+id/linkList"
+            android:background="@color/colorAccent"
+            android:layout_height="wrap_content"/>
+
 </LinearLayout>

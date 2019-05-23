@@ -28,6 +28,16 @@ import kotlin.collections.HashSet
  * Object[] toArray()    ： 返回一个数组，该数组中包括集合中的所有元素
  *
  *
+ * 继承关系
+ * Collection<–List<–ArrayList
+ * Collection<–List<–Vector
+ * Collection<–List<–LinkedList
+ * Collection<–Set<–HashSet
+ * Collection<–Set<–HashSet<–LinkedHashSet
+ * Collection<–Set<–SortedSet<–TreeSet
+ * Map<–HashMap （补充一个HashMap的子类LinkedHashMap：）
+ * Map<–SortedMap<–TreeMap
+ *
  *
  *
  */
@@ -48,11 +58,12 @@ class DataStruActivity : Activity() {
 
         //HashSet类按照哈希算法来存取集合中的对象，存取速度比较快，HashSet是根据hashCode来决定存储位置的，是通过HashMap实现的，所以对象必须实现hashCode()方法，存储的数据无序不能重复，可以存储null,但是只能存一个
         hashSetBtn.setOnClickListener {
-            val mySet = HashSet<String>()
+            val mySet = HashSet<String?>()
             mySet.add("5")
             mySet.add("1")
             mySet.add("3")
             mySet.add("1")
+            mySet.add(null)
             for (item in mySet) {
                 Log.e("hashSetTest", item)
             }
@@ -65,11 +76,40 @@ class DataStruActivity : Activity() {
             mySet.add(1)
             mySet.add(3)
             mySet.add(2)
+            mySet.add(3)
 
             for (item in mySet) {
                 Log.e("treeSetTest", "$item")
             }
         }
+
+
+        //数据可以重复，可以存null
+        arrayList.setOnClickListener {
+            val myList = arrayListOf<String?>()
+            myList.add("1")
+            myList.add("1")
+            myList.add("2")
+            myList.add("3")
+            myList.add(null)
+            for (item in myList) {
+                Log.e("arrayListTest", "$item")
+            }
+        }
+
+        //数据可以重复，可以存null
+        linkList.setOnClickListener {
+            val myList = LinkedList<String?>()
+            myList.add("1")
+            myList.add("1")
+            myList.add("2")
+            myList.add("3")
+            myList.add(null)
+            for (item in myList) {
+                Log.e("linkListTest", "$item")
+            }
+        }
+
     }
 
 
@@ -85,4 +125,6 @@ class DataStruActivity : Activity() {
         }
 
     }
+
+
 }
