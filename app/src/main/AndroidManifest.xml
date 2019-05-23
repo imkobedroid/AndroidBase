@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name="com.remote.MainActivity">
+        <activity android:name="com.remote.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,11 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".DataStruActivity"
+        <activity android:name=".activity.DataStruActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".HandlerActivity"
+        <activity android:name=".activity.HandlerActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".AidlActivity"
+        <activity android:name=".activity.AidlActivity"
                   android:screenOrientation="portrait"/>
     </application>
 

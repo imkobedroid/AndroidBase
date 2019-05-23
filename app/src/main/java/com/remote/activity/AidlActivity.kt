@@ -1,4 +1,4 @@
-package com.remote
+package com.remote.activity
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -9,6 +9,8 @@ import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import com.aidlremoteapp.IMyAidlInterface
+import com.remote.R
+import com.remote.utils.Utils
 import kotlinx.android.synthetic.main.activity_aidl.*
 import org.jetbrains.anko.toast
 
@@ -42,7 +44,7 @@ class AidlActivity : Activity() {
          */
         progressInfo.setOnClickListener {
             //判断服务是否开启
-            if (!utils.isServiceRunning(this@AidlActivity, cls)) {
+            if (!Utils.isServiceRunning(this@AidlActivity, cls)) {
                 toast("服务未开启")
                 return@setOnClickListener
             }
@@ -63,7 +65,10 @@ class AidlActivity : Activity() {
         }
 
         val intent = Intent()
-        intent.component = ComponentName(pkg, cls)
+        intent.component = ComponentName(
+            pkg,
+            cls
+        )
         bindService(intent, serviceConnection!!, Context.BIND_AUTO_CREATE)
     }
 

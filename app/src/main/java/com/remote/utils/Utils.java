@@ -1,4 +1,4 @@
-package com.remote;
+package com.remote.utils;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Dsh  imkobedroid@gmail.com
  * @date 2019-05-19
  */
-public class utils {
+public class Utils {
 
     public static boolean isServiceRunning(Context context, String ServiceName) {
         if (TextUtils.isEmpty(ServiceName)) {

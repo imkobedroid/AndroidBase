@@ -1,4 +1,4 @@
-package com.remote
+package com.remote.data
 
 /**
  * @author Dsh  imkobedroid@gmail.com

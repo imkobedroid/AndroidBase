@@ -1,9 +1,10 @@
-package com.remote
+package com.remote.activity
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import com.remote.R
 import kotlinx.android.synthetic.main.activity_data_stru.*
 import java.util.*
 import kotlin.Comparator

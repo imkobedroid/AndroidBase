@@ -1,9 +1,11 @@
-package com.remote
+package com.remote.activity
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.*
 import android.util.Log
+import com.remote.R
+import com.remote.data.HandlerData
 import kotlinx.android.synthetic.main.activity_handler.*
 import org.jetbrains.anko.toast
 
