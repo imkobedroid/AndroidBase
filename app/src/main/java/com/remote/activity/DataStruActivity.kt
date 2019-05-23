@@ -110,6 +110,21 @@ class DataStruActivity : Activity() {
             }
         }
 
+        //可以储存null值 同key后存会覆盖前面的值
+        hashMap.setOnClickListener {
+            val myMap = hashMapOf<String?, String?>()
+            myMap["key1"] = "key1"
+            myMap["key2"] = "key2"
+            myMap["key1"] = "key3"
+            myMap["key3"] = null
+            myMap[null] = null
+            myMap[null] = "key4"
+            Log.e("hashMapTest", "${myMap["key1"]}")
+            Log.e("hashMapTest", "${myMap["key2"]}")
+            Log.e("hashMapTest", "${myMap["key3"]}")
+            Log.e("hashMapTest", "${myMap[null]}")
+        }
+
     }
 
 
