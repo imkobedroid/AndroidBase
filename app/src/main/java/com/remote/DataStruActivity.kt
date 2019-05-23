@@ -3,7 +3,6 @@ package com.remote
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
-import android.support.v7.widget.AppCompatButton
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_data_stru.*
 import java.util.*

@@ -18,10 +18,11 @@ public class utils {
         }
         ActivityManager myManager = (ActivityManager) context
                 .getSystemService(Context.ACTIVITY_SERVICE);
+        assert myManager != null;
         ArrayList<ActivityManager.RunningServiceInfo> runningService = (ArrayList<ActivityManager.RunningServiceInfo>) myManager
                 .getRunningServices(30);
         for (int i = 0; i < runningService.size(); i++) {
-            if (runningService.get(i).service.getClassName().toString()
+            if (runningService.get(i).service.getClassName()
                     .equals(ServiceName)) {
                 return true;
             }
