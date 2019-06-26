@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <com.remote.activity.weight.ViewGroupA
+            android:layout_marginTop="10dp"
+            android:id="@+id/viewGroupA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorAccent">
+
+        <com.remote.activity.weight.ViewGroupB
+                android:id="@+id/viewGroupB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="60dp"
+                android:orientation="vertical"
+                android:background="@android:color/holo_blue_dark">
+
+            <com.remote.activity.weight.ViewC
+                    android:id="@+id/viewC"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_margin="60dp"
+                    android:background="@android:color/holo_green_dark"/>
+            <com.remote.activity.weight.ViewD
+                    android:id="@+id/viewD"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_margin="60dp"
+                    android:background="@color/colorPrimary"/>
+        </com.remote.activity.weight.ViewGroupB>
+    </com.remote.activity.weight.ViewGroupA>
+
+
+</LinearLayout>

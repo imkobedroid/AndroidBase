@@ -10,6 +10,8 @@ import java.util.*
 import kotlin.Comparator
 import kotlin.collections.HashSet
 
+
+
 /**
  * 常见的数据结构有：Set（集）  List（列表）   Map（映射）
  *
@@ -110,9 +112,9 @@ class DataStruActivity : Activity() {
             }
         }
 
-        //可以储存null值 同key后存会覆盖前面的值
+        //可以储存null值 同key后存会覆盖前面的值 无序 (比如插入的顺序)、也不保证序不随时间变化。
         hashMap.setOnClickListener {
-            val myMap = hashMapOf<String?, String?>()
+            val myMap = HashMap<String?, String?>()
             myMap["key1"] = "key1"
             myMap["key2"] = "key2"
             myMap["key1"] = "key3"

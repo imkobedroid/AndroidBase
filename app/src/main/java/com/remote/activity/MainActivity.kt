@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         dataStructure.setOnClickListener {
             startActivity(Intent(this@MainActivity, DataStruActivity::class.java))
         }
-
+        event.setOnClickListener {
+            startActivity(Intent(this@MainActivity, EventActivity::class.java))
+        }
     }
 }
