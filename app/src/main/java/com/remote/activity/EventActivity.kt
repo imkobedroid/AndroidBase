@@ -8,7 +8,6 @@ import android.view.MotionEvent
 import android.view.MotionEvent.*
 import com.remote.R
 import kotlinx.android.synthetic.main.activity_event.*
-import org.jetbrains.anko.toast
 
 /**
  * @author Dsh  imkobedroid@gmail.com
@@ -19,6 +18,7 @@ class EventActivity : Activity() {
 
     companion object {
         const val LOG_ID = "点击事件"
+        const val LOG_ID_TOUCH = "TOUCH点击事件"
     }
 
 
@@ -38,8 +38,24 @@ class EventActivity : Activity() {
 //        }
 
 
-        viewGroupB.setOnClickListener {
-            toast("我是B消费了此事件")
+//        viewGroupB.setOnClickListener {
+//            toast("我是B消费了此事件")
+//        }
+
+
+        viewC.setOnTouchListener { v, event ->
+            Log.d(LOG_ID_TOUCH, "我是TouchListener")
+            when (event.action) {
+                0 -> Log.d(LOG_ID_TOUCH, "ACTION_DOWN")
+                1 -> Log.d(LOG_ID_TOUCH, "ACTION_UP")
+                2 -> Log.d(LOG_ID_TOUCH, "ACTION_MOVE")
+                3 -> Log.d(LOG_ID_TOUCH, "ACTION_CANCEL")
+            }
+            true
+        }
+
+        viewC.setOnClickListener {
+            Log.d(LOG_ID_TOUCH, "我是onclick")
         }
     }
 
