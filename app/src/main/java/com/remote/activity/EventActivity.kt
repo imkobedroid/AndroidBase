@@ -51,11 +51,22 @@ class EventActivity : Activity() {
                 2 -> Log.d(LOG_ID_TOUCH, "ACTION_MOVE")
                 3 -> Log.d(LOG_ID_TOUCH, "ACTION_CANCEL")
             }
-            true
+            false
         }
 
-        viewC.setOnClickListener {
-            Log.d(LOG_ID_TOUCH, "我是onclick")
+//        viewC.setOnClickListener {
+//            Log.d(LOG_ID_TOUCH, "我是onclick")
+//        }
+
+        viewGroupB.setOnTouchListener { v, event ->
+            Log.d(LOG_ID_TOUCH, "我是viewGroupB的TouchListener")
+            when (event.action) {
+                0 -> Log.d(LOG_ID_TOUCH, "我是viewGroupB的ACTION_DOWN")
+                1 -> Log.d(LOG_ID_TOUCH, "我是viewGroupB的ACTION_UP")
+                2 -> Log.d(LOG_ID_TOUCH, "我是viewGroupB的ACTION_MOVE")
+                3 -> Log.d(LOG_ID_TOUCH, "我是viewGroupB的ACTION_CANCEL")
+            }
+            true
         }
     }
 

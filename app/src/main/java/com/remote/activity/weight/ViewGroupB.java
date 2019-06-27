@@ -31,7 +31,7 @@ public class ViewGroupB extends LinearLayout {
         Log.d(LOG_ID, this.getClass().getSimpleName() + " onInterceptTouchEvent -> " + ViewUtils.actionToString(ev.getAction()));
         boolean result = super.onInterceptTouchEvent(ev);
         Log.d(LOG_ID, this.getClass().getSimpleName() + " onInterceptTouchEvent return super.onInterceptTouchEvent(ev)=" + result);
-        return result;
+        return true;
     }
 
     @Override
