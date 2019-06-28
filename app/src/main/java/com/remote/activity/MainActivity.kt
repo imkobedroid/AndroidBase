@@ -30,5 +30,9 @@ class MainActivity : AppCompatActivity() {
         event.setOnClickListener {
             startActivity(Intent(this@MainActivity, EventActivity::class.java))
         }
+
+        custom.setOnClickListener {
+            startActivity(Intent(this@MainActivity, CustomActivity::class.java))
+        }
     }
 }
