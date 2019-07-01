@@ -2,10 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:paddingTop="100dp"
-              android:paddingBottom="100dp"
-              android:paddingStart="100dp"
-              android:paddingEnd="100dp"
+
               tools:ignore="RtlSymmetry">
 
     <!--<com.remote.activity.weight.CustomView1-->
@@ -22,7 +19,12 @@
     <!--custom:secondColor="#2F9DD2"-->
     <!--/>-->
 
-    <com.remote.activity.weight.CustomView2
+    <!--<com.remote.activity.weight.CustomView2-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+    <com.remote.activity.weight.CustomView3
+            android:background="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
