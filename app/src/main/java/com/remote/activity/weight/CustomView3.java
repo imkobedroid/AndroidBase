@@ -8,7 +8,6 @@ import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 
-import java.util.List;
 
 /**
  * @author Dsh  imkobedroid@gmail.com
@@ -106,10 +105,10 @@ public class CustomView3 extends View {
 
         @SuppressLint("DrawAllocation") RectF rect1 = new RectF(indexWidth - 300, index - 300, indexWidth + 300, index + 300);
         canvas.drawArc(rect1, -90, 180, false, paint5);
-
         paint5.setColor(Color.YELLOW);
-        @SuppressLint("DrawAllocation") RectF rect2 = new RectF(indexWidth - 300, index - 300, indexWidth + 300, index + 300);
-        canvas.drawArc(rect2, -90, 90, false, paint5);
+        canvas.drawArc(rect1, -90, 90, false, paint5);
+        paint5.setColor(Color.BLUE);
+        canvas.drawArc(rect1, -90, 60, false, paint5);
 
         //计算文字所在矩形，可以得到宽高
         @SuppressLint("DrawAllocation") Rect rect = new Rect();
@@ -117,7 +116,5 @@ public class CustomView3 extends View {
         int w = rect.width();
         //文字居中
         canvas.drawText("Android", indexWidth - w / 2, index, paint2);
-
-
     }
 }
