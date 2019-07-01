@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-              android:layout_height="match_parent" xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_height="match_parent"
               android:paddingTop="100dp"
               android:paddingBottom="100dp"
               android:paddingStart="100dp"
@@ -14,12 +14,16 @@
             <!--android:layout_height="match_parent"-->
             <!--android:paddingLeft="10dp"/>-->
 
-    <com.remote.activity.weight.CustomView
+    <!--<com.remote.activity.weight.CustomView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--custom:circleWidth="30dp"-->
+    <!--custom:firstColor="#D4F668"-->
+    <!--custom:secondColor="#2F9DD2"-->
+    <!--/>-->
+
+    <com.remote.activity.weight.CustomView2
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            custom:circleWidth="30dp"
-            custom:firstColor="#D4F668"
-            custom:secondColor="#2F9DD2"
-    />
+            android:layout_height="match_parent"/>
 
 </LinearLayout>
