@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
               android:layout_height="match_parent"
-
+              android:gravity="center"
               tools:ignore="RtlSymmetry">
 
     <!--<com.remote.activity.weight.CustomView1-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:background="@color/colorPrimary"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:paddingLeft="10dp"/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingLeft="10dp"/>-->
 
     <!--<com.remote.activity.weight.CustomView-->
     <!--android:layout_width="match_parent"-->
@@ -20,12 +20,18 @@
     <!--/>-->
 
     <!--<com.remote.activity.weight.CustomView2-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
 
-    <com.remote.activity.weight.CustomView3
-            android:background="@color/colorAccent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <!--<com.remote.activity.weight.CustomView3-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+
+    <com.remote.activity.weight.CustomView4
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:paddingLeft="20dp"
+            tools:ignore="RtlHardcoded"/>
 
 </LinearLayout>
