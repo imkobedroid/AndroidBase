@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+    <com.android.base.weight.MyHorizontalScrollView android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    tools:ignore="UselessParent">
+        <TextView android:layout_width="match_parent"
+                  android:textSize="20sp"
+                  android:background="@color/colorPrimary"
+                  android:textColor="@color/colorAccent"
+                  android:maxLines="1"
+                  android:gravity="center"
+                  android:text="滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！滑动冲突解决～！"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="100dp"
+                  android:paddingBottom="100dp"/>
+
+    </com.android.base.weight.MyHorizontalScrollView>
+
+</RelativeLayout>

@@ -35,6 +35,7 @@ class CustomActivity : AppCompatActivity() {
         fragmentList.add(CustomFragment4())
         fragmentList.add(CustomFragment5())
         fragmentList.add(CustomFragment6())
+        fragmentList.add(CustomFragment8())
         fragmentList.add(CustomFragment7())
         for (index in 0 until fragmentList.size) {
             tabLayout.addTab(tabLayout.newTab())

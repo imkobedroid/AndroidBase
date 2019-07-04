@@ -8,7 +8,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import androidx.annotation.RequiresApi;
@@ -92,76 +91,30 @@ public class CustomView5 extends View {
             canvas.drawLine(distanceX, distanceY, progress, distanceY, paint2);
             canvas.drawCircle(progress, distanceY, radius, paint3);
         }
-
     }
 
 
-    /**
-     * 解决本组件镶嵌在viewpager中产生的左右滑动冲突
-     * 本方法的作用是处理拦截分发的作用
-     *
-     * @param event 事件
-     * @return 分发
-     */
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
-        //判断事件的区域是不是在本控件上
-        boolean isInViewRect = calcViewScreenLocation(this, event);
-
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                //通知父组件是否来处理本次事件，true表示父组件不拦截本组件自己处理，走下面的super.dispatchTouchEvent(event); false表示父组件拦截由父组件处理
-                getParent().requestDisallowInterceptTouchEvent(isInViewRect);
-                break;
-
-            case MotionEvent.ACTION_MOVE:
-                getParent().requestDisallowInterceptTouchEvent(isInViewRect);
-                break;
-            default:
-        }
-
-        boolean result = super.dispatchTouchEvent(event);
-        Log.v(LOG, "super.dispatchTouchEvent(event)=" + result);
-        return super.dispatchTouchEvent(event);
-    }
-
-
-    /**
-     * 解决本组件镶嵌在viewpager中产生的左右滑动冲突
-     * 本方法的作用是消耗事件，这里返回值的true表示消耗掉了事件，但是并不能让父类直到已经处理掉了
-     */
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         float oldX;
         switch (event.getAction()) {
-
             case MotionEvent.ACTION_DOWN:
                 oldX = event.getX();
-                if (oldX > progress - radius && oldX < progress + radius) {
-                    setProgressIndex(oldX);
-                    Log.v(LOG, "ACTION_DOWN=" + true);
-                    return true;
-                }
+                setProgressIndex(oldX);
+                getParent().requestDisallowInterceptTouchEvent(true);
+                return true;
             case MotionEvent.ACTION_MOVE:
-//
-//                //点击不可以拖动进度条就用这个代码
-//                oldX = event.getX();
-//                if (oldX > progress - radius && oldX < progress + radius) {
-//                    setProgressIndex(oldX);
-//                    return true;
-//                }
-
-                //点击也可以拖动进度条用这个代码
                 setProgressIndex(event.getX());
-                Log.v(LOG, "ACTION_MOVE=" + true);
+                getParent().requestDisallowInterceptTouchEvent(true);
                 return true;
             default:
+                getParent().requestDisallowInterceptTouchEvent(false);
+                return false;
         }
-
-        boolean result = super.onTouchEvent(event);
-        Log.v(LOG, "super.onTouchEvent(event)=" + result);
-        return result;
+//        boolean result = super.onTouchEvent(event);
+//        Log.v(LOG, "super.onTouchEvent(event)" + result);
+//        return result;
     }
 
 
