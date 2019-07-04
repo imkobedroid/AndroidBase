@@ -1,4 +1,4 @@
-package com.aidlremoteapp
+package com.android
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.aidlremoteapp", appContext.packageName)
+        assertEquals("com.threadcom", appContext.packageName)
     }
 }

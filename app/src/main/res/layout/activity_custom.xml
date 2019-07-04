@@ -1,45 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent" android:layout_height="match_parent"
               android:gravity="center"
+              android:orientation="vertical"
               tools:ignore="RtlSymmetry">
-
-    <!--<com.remote.activity.weight.CustomView1-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:background="@color/colorPrimary"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:paddingLeft="10dp"/>-->
-
-    <!--<com.remote.activity.weight.CustomView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--custom:circleWidth="30dp"-->
-    <!--custom:firstColor="#D4F668"-->
-    <!--custom:secondColor="#2F9DD2"-->
-    <!--/>-->
-
-    <!--<com.remote.activity.weight.CustomView2-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"/>-->
-
-    <!--<com.remote.activity.weight.CustomView3-->
-    <!--android:background="@color/colorAccent"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"/>-->
-
-    <!--<com.remote.activity.weight.CustomView4-->
-    <!--android:layout_width="200dp"-->
-    <!--android:layout_height="300dp"-->
-    <!--android:paddingLeft="20dp"-->
-    <!--tools:ignore="RtlHardcoded"/>-->
-
-    <com.remote.activity.weight.CustomView5
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+    <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            android:id="@+id/tabLayout"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/colorPrimary"
+            android:layout_height="wrap_content"/>
 
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.remote">
+          xmlns:tools="http://schemas.android.com/tools" package="com.android.base">
 
     <application
             android:allowBackup="true"
@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name="com.remote.activity.MainActivity">
+        <activity android:name="com.android.base.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,16 +17,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.DataStruActivity"
+        <activity android:name="com.android.base.activity.DataStruActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".activity.HandlerActivity"
+        <activity android:name="com.android.base.activity.HandlerActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".activity.AidlActivity"
+        <activity android:name="com.android.base.activity.AidlActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".activity.EventActivity"
+        <activity android:name="com.android.base.activity.EventActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".activity.CustomActivity"
+        <activity android:name="com.android.base.activity.CustomActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.android.base.activity.DisAllActivity"
                   android:screenOrientation="portrait"/>
     </application>
 
