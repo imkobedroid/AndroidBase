@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.android.base.R
+import kotlinx.android.synthetic.main.fragment_custom_6.view.*
 
 /**
  * @author Dsh  imkobedroid@gmail.com
@@ -17,7 +18,7 @@ class CustomFragment6 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_custom_6, null)
-//        view.CustomView5.setOnClickListener {  }
+        view.CustomView5.setOnClickListener { }
         return view
     }
 }

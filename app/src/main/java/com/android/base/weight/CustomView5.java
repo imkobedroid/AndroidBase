@@ -94,6 +94,14 @@ public class CustomView5 extends View {
     }
 
 
+    /**
+     * 这里只需要ACTION_DOWN返回为true就行了，因为只有返回为true了才可以接受后续事件，但是后续事件返回为true或者false都没得影响
+     * 返回false表示本次不消耗，但是父组件也不会走onTouchEvent，而是事件消失，发挥true表示消费此事件，所以这给子view设置了点击事件，让他的
+     * down返回为true接受后续事件
+     *
+     * @param event
+     * @return
+     */
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -102,19 +110,47 @@ public class CustomView5 extends View {
             case MotionEvent.ACTION_DOWN:
                 oldX = event.getX();
                 setProgressIndex(oldX);
-                getParent().requestDisallowInterceptTouchEvent(true);
-                return true;
+//                getParent().requestDisallowInterceptTouchEvent(true);
+//                return true;
+                break;
             case MotionEvent.ACTION_MOVE:
                 setProgressIndex(event.getX());
-                getParent().requestDisallowInterceptTouchEvent(true);
-                return true;
-            default:
-                getParent().requestDisallowInterceptTouchEvent(false);
+//                getParent().requestDisallowInterceptTouchEvent(true);
                 return false;
+//                break;
+            default:
+//                getParent().requestDisallowInterceptTouchEvent(false);
+//                return false;
         }
 //        boolean result = super.onTouchEvent(event);
 //        Log.v(LOG, "super.onTouchEvent(event)" + result);
 //        return result;
+
+        return super.onTouchEvent(event);
+    }
+
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                /**
+                 *  在dispatchTouchEvent这方法中ACTION_DOWN的时候设置requestDisallowInterceptTouchEvent为true或者false都没得影响，
+                 *  因为ACTION_DOWN事件只要父类不手动拦截都会传入他的子view，这里设置为true子view自己处理这个down，设置为false让父组件
+                 *  可以进行拦截，但是父组件也不会拦截所以也是传递下来子view处理，所以这里设置false或者true并没有影响，关键是看onTouchEvent中对这个
+                 *  down事件的返回值才是关键，因为onTouchEvent返回值直接影响后续事件需不需要这个子view处理
+                 *
+                 */
+
+                getParent().requestDisallowInterceptTouchEvent(true);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                getParent().requestDisallowInterceptTouchEvent(true);
+                break;
+            default:
+                getParent().requestDisallowInterceptTouchEvent(false);
+        }
+        return super.dispatchTouchEvent(event);
     }
 
 
